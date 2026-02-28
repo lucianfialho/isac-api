@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
 
     if (!user.stripeCustomerId) {
       return NextResponse.json(
-        { error: "No billing account. Subscribe first at https://isac.dev/pricing" },
+        { error: "No billing account. Subscribe first at https://thedevhype.online/pricing" },
         { status: 404 }
       );
     }

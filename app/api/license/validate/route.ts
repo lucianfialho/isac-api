@@ -19,6 +19,6 @@ export async function POST(request: NextRequest) {
     referralCode: user.referralCode,
     message: isActive
       ? undefined
-      : "No active subscription. Visit https://isac.dev/pricing",
+      : "No active subscription. Visit https://thedevhype.online/pricing",
   });
 }
