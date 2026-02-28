@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "./auth/server";
+import { getAuth } from "./auth/server";
 import { getUserById, createUser } from "./db";
 import { generateReferralCode } from "./referral";
 import { getDb, schema } from "@/db";
@@ -10,7 +10,7 @@ import { eq } from "drizzle-orm";
  * Returns { user } or null.
  */
 export async function getSession() {
-  const { data } = await auth.getSession();
+  const { data } = await getAuth().getSession();
   return data;
 }
 
